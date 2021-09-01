@@ -1,0 +1,17 @@
+{%extends 'blog/base.html'%}
+
+{%block content%}
+<h1>My Blogs</h1>
+<hr>
+<a href="{%url 'create'%}">Create blog</a>
+{%for blog in blogs%}
+<h2>{{blog.name}}</h2>
+<small>{{blog.email}}</small>
+<p>{{blog.text}}</p>
+<small>{{blog.date}}</small>
+
+<a href="{%url 'detail' blog.id %}">detail</a>
+
+<a href="{%url 'delete' blog.id %}" class="btn btn-danger">delete</a>
+{%endfor%}
+{%endblock content%}

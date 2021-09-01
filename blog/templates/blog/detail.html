@@ -1,0 +1,14 @@
+{%extends 'blog/base.html'%}
+
+{%block content%}
+<h1>My Blogs Detail</h1>
+<hr>
+
+
+<h2>{{blog.name}}</h2>
+<small>{{blog.email}}</small>
+<p>{{blog.text}}</p>
+<small>{{blog.date}}</small> 
+<a href="/" class="btn btn-primary">back</a>
+
+{%endblock content%}
